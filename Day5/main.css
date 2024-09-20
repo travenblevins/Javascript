@@ -3,11 +3,10 @@ body {
 }
 
 .input {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
     height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
@@ -22,4 +21,15 @@ button {
     width:145px;
     height:20px;
 }
+
+.box{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    border:2px solid gray;
+}
+
+
+
 
