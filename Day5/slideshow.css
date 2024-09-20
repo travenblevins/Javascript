@@ -10,3 +10,8 @@ body {
 .slide {
     display:flex;
 }
+
+img {
+    height:500px;
+    width:500px;
+}
