@@ -139,5 +139,20 @@ equal.addEventListener('click', function() {
             const num2 = Number(third3.textContent)
             output.textContent = num1 + num2
         }
+        else if (third2.textContent === '-') {
+            const num1 = Number(third1.textContent)
+            const num2 = Number(third3.textContent)
+            output.textContent = num1 - num2
+        } else if (third2.textContent === 'x') {
+            const num1 = Number(third1.textContent)
+            const num2 = Number(third3.textContent)
+            output.textContent = num1 * num2
+        } else if (third2.textContent === '/') {
+            const num1 = Number(third1.textContent)
+            const num2 = Number(third3.textContent)
+            output.textContent = num1 / num2
+        }
     }
 })
+
+
