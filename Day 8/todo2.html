@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add any desired styles here */
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="input" placeholder="Enter Task">
+    <button id="button">Add Task</button>
+    <ul id="taskList"></ul> <!-- Changed the id to match the JavaScript -->
+
+    <script>
+        const tasks = [];
+        const input = document.getElementById('input');
+        const button = document.getElementById('button');
+        const taskList = document.getElementById('taskList'); // Use the existing <ul>
+
+        button.addEventListener('click', function() {
+            if (input.value !== '') {
+                const task = input.value;
+
+                tasks.unshift(task); // Add the new task to the beginning of the tasks array
+                
+                // Clear the current task list display
+                taskList.innerHTML = ''; 
+
+                // Loop through tasks and create list items
+                tasks.forEach(task => {
+                    const listItem = document.createElement('li'); // Create a new <li> for each task
+                    listItem.textContent = task; // Set the text of the <li>
+                    taskList.appendChild(listItem); // Append the <li> to the <ul>
+                });
+
+                input.value = ''; // Clear the input field
+            }
+        });
+    </script>
+</body>
+</html>
