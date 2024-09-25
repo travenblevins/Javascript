@@ -7,38 +7,13 @@
     <style>
         /* Add any desired styles here */
     </style>
+    <script src="todo2.js" defer></script>
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <input type="text" id="input" placeholder="Enter Task">
-    <button id="button">Add Task</button>
-    <ul id="taskList"></ul> <!-- Changed the id to match the JavaScript -->
-
-    <script>
-        const tasks = [];
-        const input = document.getElementById('input');
-        const button = document.getElementById('button');
-        const taskList = document.getElementById('taskList'); // Use the existing <ul>
-
-        button.addEventListener('click', function() {
-            if (input.value !== '') {
-                const task = input.value;
-
-                tasks.unshift(task); // Add the new task to the beginning of the tasks array
-                
-                // Clear the current task list display
-                taskList.innerHTML = ''; 
-
-                // Loop through tasks and create list items
-                tasks.forEach(task => {
-                    const listItem = document.createElement('li'); // Create a new <li> for each task
-                    listItem.textContent = task; // Set the text of the <li>
-                    taskList.appendChild(listItem); // Append the <li> to the <ul>
-                });
-
-                input.value = ''; // Clear the input field
-            }
-        });
-    </script>
+    <h1>Input</h1>
+    <div class="input">
+        <input type="text" id="input" placeholder="new task">
+        <button id="button">Add +</button>
+    </div>
 </body>
 </html>
