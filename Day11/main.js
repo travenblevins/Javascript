@@ -19,7 +19,7 @@ var fruits = [
 const fruitBox = document.querySelector('.fruit-box');
 
 // Ensure the input element has the correct selector
-const input = document.querySelector('input[placeholder="add-fruit"]');
+const input = document.querySelector('input');
 
 window.addEventListener("load", renderFruit);
 
@@ -75,6 +75,24 @@ addFruit.addEventListener('click', function() {
             id: 3 // Update the id based on your list
         };
         fruits.push(watermelon);
+        input.value = ''; // Clear the input field
+        renderFruit(); // Re-render the fruits
+    }  else if (inputValue === 'pear') {
+        const pear = {
+            name: 'Pear',
+            img: 'Fruitimages/shutterstock_1693201075_1024x1024.webp', // Use a valid image URL for watermelon
+            id: 3 // Update the id based on your list
+        };
+        fruits.push(pear);
+        input.value = ''; // Clear the input field
+        renderFruit(); // Re-render the fruits
+    } else {
+        const broccoli = {
+            name: 'Type a fruit next time :(',
+            img: 'Fruitimages/download.jpeg', // Use a valid image URL for watermelon
+            id: 3 // Update the id based on your list
+        };
+        fruits.push(broccoli);
         input.value = ''; // Clear the input field
         renderFruit(); // Re-render the fruits
     }
