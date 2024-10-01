@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 5;
+    padding: 5;
+    height:100vh;
+}
+
+
+.characters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;;
+    align-items: flex-start;
+    height: 100%;
+    gap:10px;
+}
