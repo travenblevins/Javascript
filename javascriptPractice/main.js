@@ -1,12 +1,22 @@
-function sumArray(array) {
-    if(array !== '') {
-      const highValue = Math.max(...array);
-      const lowValue = Math.min(...array);
-      const newArray = array.filter((value) => value !== highValue && value !== lowValue);
-      return newArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
-  } else {
-    return null
-  }
-}
+// function isPalindrome(x) {
+//   const word = x.toLowerCase()
+//   const array = word.split('')
+//   const reverseArray = array.reverse()
+//   const reverseWord = reverseArray.join('')
+  
+//   if (word === reverseWord) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
 
-console.log(sumArray([1, 2, 3, 4, 5]))
+
+
+
+
+
+
+
+
+
