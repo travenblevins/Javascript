@@ -43,3 +43,4 @@ const sort = (array) => {
 }
 
 console.log(sort([5, 4, 2])) // Output: [2, 4, 5]
+
