@@ -12,19 +12,30 @@
 // }
 
 
-function nbYear(p0, percent, aug, p) {
-    let realPercent = percent * 0.01
-    let years = 0
+// function nbYear(p0, percent, aug, p) {
+//     let realPercent = percent * 0.01
+//     let years = 0
 
-    for(i = 0; p0 < p; i++) {
-        p0 += p0 * realPercent + aug
-        p0 = Math.floor(p0)
-        years++
-    }
-    return years
+//     for(i = 0; p0 < p; i++) {
+//         p0 += p0 * realPercent + aug
+//         p0 = Math.floor(p0)
+//         years++
+//     }
+//     return years
+// }
+
+// console.log(nbYear(1000, 2.0, 50, 1214)) 
+
+
+function noBoringZeros(n) {
+    let numString = n.toString()
+    let num = numString.split('')
+    while(num[num.length -1] === '0') {
+        num.pop()   
+    } return Number(num.join(''))
 }
 
-console.log(nbYear(1000, 2.0, 50, 1214)) 
+console.log(noBoringZeros(1450))
 
 
 
